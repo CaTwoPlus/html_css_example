@@ -1,0 +1,278 @@
+html {
+    background-color: rgb(222, 222, 222);
+    overflow-x: hidden;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+header {
+    padding: 20px;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    height: 40px;
+    margin: 0 auto;
+    background-color: rgb(31, 31, 31);
+    border-radius: 8px;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    width: 100%; 
+    max-width: 960px; 
+    padding: 0 20px 0 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    display: inline;
+    margin: 0 15px;
+}
+
+li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    position: relative;
+}
+
+li a::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    border-radius: 4px;
+    background-color: white;
+    bottom: -5px;
+    left: 0;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .2s ease-in-out;
+}
+  
+li a:hover::before {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+header .logo {
+    width: 250px; 
+    height: auto; 
+    margin-bottom: 10px;
+}
+
+main {
+    text-align: left;
+}
+
+.banner {
+    position: relative;
+    background-image: url('/Traditional-Greek-Salad-1.jpg');
+    height: 120px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 960px; 
+}
+
+.banner h1, .banner p {
+    position: relative; 
+    z-index: 2; 
+}
+
+.banner h1 {
+    font-size: 2.5rem;
+    font-weight: 1500;
+    margin: 0;
+}
+
+.banner p {
+    font-size: 1.2rem;
+    margin-top: 20px;
+    margin-bottom: 0px;
+}
+
+.banner .overlay {
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    bottom: 0; 
+    z-index: 1;
+    background-color: grey;
+    mix-blend-mode: multiply;
+}
+
+.menu-columns {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    gap: 20px;
+}
+
+.column {
+    background-color: white;
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    padding: 20px;
+    width: 280px; 
+    height: 420px;
+    transition: transform 0.2s ease-in-out; 
+    background-color: #fae0c3;
+}
+
+.column:hover {
+    transform: scale(1.05); 
+}
+
+.column img {
+    width: 100%; 
+    height: auto;
+    margin-bottom: 15px; 
+}
+
+.column h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    margin-top: 0px;
+}
+
+.column p {
+    font-size: 1rem;
+    color: #555; 
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+#Openinghrs {
+    margin-top: 10px;
+    margin-left: 20%;
+    align-content: center;
+}
+
+.column a {
+    display: inline-block;
+    font-size: 1rem;
+    color: #007BFF;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.column a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    gap: 650px;
+    color: black;
+    padding: 0 10px 10px 10px;
+}
+
+.footer-left img {
+    width: 50px;
+}
+
+.footer-line {
+    border: none; 
+    height: 2px; 
+    width: 170%;
+    background-color: black; 
+    margin: 10px auto; 
+    transform: translate(-41%);
+}
+
+@media (width: 1024px) {
+    footer {
+        gap: 600px;
+    }
+    .banner, nav {
+        max-width: 945px;
+    }
+}
+
+@media (max-width: 1023px) {
+    .banner {
+        margin: 0 20px;
+    }
+    nav {
+        width: auto;
+    }
+    footer {
+        gap: 55vw;
+    }
+}
+
+@media (max-width: 840px) {
+    footer {
+        gap: 50vw;
+    }
+}
+
+@media (max-width: 768px) {
+    .banner {
+        height: auto;
+    }
+    .banner, nav {
+        width: auto;
+        margin: 0;
+    }
+    li {
+        margin: 0 10px;
+    }
+    .menu-columns {
+        flex-direction: column;
+        margin: 20px 0 0 0;
+        padding: 20px 0 0 0;
+    }
+    .column {
+        width: auto;
+        height: auto;
+    }
+    main {
+        padding: 20px
+    }
+    footer {
+        gap: 45vw;
+    }
+}
+
+@media (max-width: 685px) {
+    footer {
+        gap: 35vw;
+    }
+    .footer-line {
+        width: 100%;
+        transform: translate(0%);
+    }
+}
+
+@media (max-width: 580px) {
+    footer {
+        gap: 15vw;
+    }
+}
+
+@media (max-width: 360px) {
+    li {
+        margin: 0px 6px;
+    }
+}
